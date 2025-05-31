@@ -32,7 +32,7 @@ The default cost function is the squared Euclidean distance (SqEuclidean)
 geom = pointcloud.PointCloud(x, y, cost_fn=None)
 
 """
-Sinkhorn algorithm used to calculate the optimal coupling for `geom`. Wrapped in
+Sinkhorn algorithm (see Resource [1]) used to calculate the optimal coupling for `geom`. Wrapped in
 convenience function `linear.solve()`
 """
 solve_fn = jax.jit(linear.solve) # jitting => second time is faster (assuming similar shapes)
